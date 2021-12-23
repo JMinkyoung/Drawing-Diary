@@ -30,7 +30,7 @@ const DiaryDisplay = ({data}) => {
         <ContentWrapper>
 
             <HeadContent>
-                <DateContent>{`${data.date[0]}년 ${data.date[1]}월 ${data.date[2]}일`}</DateContent>
+                <DateContent>{`${data.date[0]}년 ${data.date[1].slice(-2)}월 ${data.date[2]}일`}</DateContent>
                 <TitleContent defaultValue={data.title} readonly disabled/>
                 <EmotionContent>
                     {data.emotion === "good" && <img src="/images/good.png"/>}
