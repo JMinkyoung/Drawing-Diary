@@ -9,7 +9,7 @@ const DiaryControl = ({date, title, emotion, imgurl,text, edited}) => {
     const dispatch = useDispatch();
 
     let year = ''+date.getFullYear();
-    let month = ('0' + (date.getMonth() + 1)).slice(-2);
+    let month = ('0' + ((date.getMonth() + 1)+"").slice(-2));
     let day = ('0' + date.getDate()).slice(-2);
 
     const finaldate = [year, month, day];
@@ -26,7 +26,6 @@ const DiaryControl = ({date, title, emotion, imgurl,text, edited}) => {
                 imgurl,
                 text,
             }));
-            // window.location.assign(window.location.origin);
             router.push('/DiaryList');
         }
     };
@@ -43,7 +42,6 @@ const DiaryControl = ({date, title, emotion, imgurl,text, edited}) => {
                 imgurl,
                 text,
             }));
-            // window.location.assign(window.location.origin);
             router.push('/DiaryList');
         }
     };
